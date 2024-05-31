@@ -13,6 +13,12 @@ public class UserController {
     private final UserService us;
     private final HttpSession session;
 
+    @PostMapping("/logout")
+    public String logout() {
+        
+        return "login-form";
+    }
+
     // http://localhost:8080/oauth/callback?code=3u9fk
     @GetMapping("/oauth/callback")
     public String oauthCallback(String code) {

@@ -114,4 +114,8 @@ public class UserService {
             return returnUser;
         }
     }
+
+    public void 로그아웃(){
+
+    }
 }
