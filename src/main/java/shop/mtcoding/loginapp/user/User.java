@@ -1,4 +1,4 @@
-package shop.mecoding.loginapp.user;
+package shop.mtcoding.loginapp.user;
 
 import jakarta.persistence.*;
 import lombok.Builder;

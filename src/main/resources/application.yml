@@ -4,7 +4,12 @@ server:
       charset: utf-8
       force: true
   port: 8080
+
 spring:
+  mustache:
+    servlet:
+      expose-request-attributes: true
+      expose-session-attributes: true
   datasource:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:test;MODE=MySQL
@@ -15,8 +20,12 @@ spring:
       enabled: true
   jpa:
     hibernate:
-      ddl-auto: create # none, update
+      ddl-auto: create
     show-sql: true
     properties:
       hibernate:
         format_sql: true
+    defer-datasource-initialization: true # ???? create ?? ? ?? sql init ? ??
+  sql:
+    init:
+      data-locations: classpath:db/data.sql
